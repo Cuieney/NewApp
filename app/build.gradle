@@ -29,20 +29,20 @@ android {
         // 如果读取不到'keystore.props.file'属性，就使用debug keystore
 
 
-        if (localProps['keystore.props.file']) {
-            keyProps.load(new FileInputStream(file(localProps['keystore.props.file'])))
-        } else {
-            keyProps["store"] = 'cuieney.jks'
-            keyProps["alias"] = 'cuieney'
-            keyProps["storePass"] = '123456'
-            keyProps["pass"] = '123456'
-        }
+//        if (localProps['keystore.props.file']) {
+//            keyProps.load(new FileInputStream(file(localProps['keystore.props.file'])))
+//        } else {
+//            keyProps["store"] = 'cuieney.jks'
+//            keyProps["alias"] = 'cuieney'
+//            keyProps["storePass"] = '123456'
+//            keyProps["pass"] = '123456'
+//        }
 
         debug {
-            storeFile file(keyProps["store"])
-            keyAlias keyProps["alias"]
-            storePassword keyProps["storePass"]
-            keyPassword keyProps["pass"]
+//            storeFile file(keyProps["store"])
+//            keyAlias keyProps["alias"]
+//            storePassword keyProps["storePass"]
+//            keyPassword keyProps["pass"]
         }
 
         debug1 {
@@ -54,18 +54,18 @@ android {
 
         release {
             // release版本使用assert确保存在该属性否则报错，避免错误打包
-            assert localProps['keystore.props.file'];
-            storeFile file(keyProps["store"])
-            keyAlias keyProps["alias"]
-            storePassword keyProps["storePass"]
-            keyPassword keyProps["pass"]
+//            assert localProps['keystore.props.file'];
+//            storeFile file(keyProps["store"])
+//            keyAlias keyProps["alias"]
+//            storePassword keyProps["storePass"]
+//            keyPassword keyProps["pass" ]
         }
 
         release1 {
-            storeFile file('cuieney.jks')
-            keyAlias 'cuieney'
-            storePassword '123456'
-            keyPassword '123456'
+//            storeFile file('cuieney.jks')
+//            keyAlias 'cuieney'
+//            storePassword '123456'
+//            keyPassword '123456'
         }
     }
 
