@@ -1,6 +1,7 @@
 package com.android.plugin.view.activity;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.android.plugin.R;
 import com.android.plugin.common.base.MvpActivity;
@@ -33,6 +34,9 @@ public class MainActivity extends MvpActivity<IHomeView,HomePresenter> implement
     @Override
     protected void setupActivityComponent(ActivityComponent activityComponent) {
         activityComponent.inject(this);
+        Log.i("oye", "setupActivityComponent: dev 测试1");
+        Log.i("oye", "setupActivityComponent: dev2 测试2");
+//        Log.i("oye", "setupActivityComponent: dev3 测试3");
     }
 
     @NonNull
