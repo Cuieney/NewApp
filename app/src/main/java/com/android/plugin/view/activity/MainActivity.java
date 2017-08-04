@@ -36,7 +36,7 @@ public class MainActivity extends MvpActivity<IHomeView,HomePresenter> implement
         activityComponent.inject(this);
         Log.i("oye", "setupActivityComponent: dev 测试1");
         Log.i("oye", "setupActivityComponent: dev2 测试2");
-        Log.i("oye", "setupActivityComponent: dev3 测试3");
+//        Log.i("oye", "setupActivityComponent: dev3 测试3");
     }
 
     @NonNull
